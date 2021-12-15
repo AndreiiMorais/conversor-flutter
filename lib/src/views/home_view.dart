@@ -1,7 +1,5 @@
-import 'dart:html';
-import 'dart:ui';
-
 import 'package:conversor_flutter/src/models/currency.dart';
+import 'package:conversor_flutter/src/models/model_currency.dart';
 import 'package:flutter/material.dart';
 
 class HomeView extends StatelessWidget {
@@ -13,35 +11,29 @@ class HomeView extends StatelessWidget {
       body: SizedBox(
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
-        child: Column(children: [
-          Image.asset('asset/logo.png'),
-          SizedBox(
-            width: MediaQuery.of(context).size.width,
-            height: MediaQuery.of(context).size.height,
-            child: Row(
-              children: [
-                DropdownButton(
-                  items: const [
-                    DropdownMenuItem(
-                      value: 1,
-                      child: Text('Real'),
-                    ),
-                    DropdownMenuItem(
-                      value: 2,
-                      child: Text('Dolar'),
-                    ),
-                  ],
-                  onChanged: (value) {},
-                ),
-                const TextField(),
-              ],
-            ),
+        child: Padding(
+          padding: const EdgeInsets.only(top: 100, right: 30, left: 30),
+          child: Column(
+            children: [
+              Image.asset(
+                'assets/logo.png',
+                width: 150,
+                height: 150,
+              ),
+              ModelCurrency(),
+              ModelCurrency(),
+              SizedBox(
+                height: 50,
+              ),
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                    primary: Colors.green, elevation: 20),
+                onPressed: () {},
+                child: Text('CONVERTER'),
+              )
+            ],
           ),
-          ElevatedButton(
-            onPressed: () {},
-            child: Text('CONVERTER'),
-          )
-        ]),
+        ),
       ),
     );
   }
