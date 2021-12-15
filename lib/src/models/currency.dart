@@ -12,7 +12,7 @@ class CurrencyModel {
       required this.euro,
       required this.bitcoin});
 
-  static LIst<CurrencyModel> getCurrencies() {
+  static List<CurrencyModel> getCurrencies() {
     return <CurrencyModel>[
       CurrencyModel(
           name: 'Real', real: 1.0, dolar: 0.18, euro: 0.15, bitcoin: 0.000016),

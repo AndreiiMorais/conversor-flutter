@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import 'src/views/home_view.dart';
+
 main() {
   runApp(AppWidget());
 }
