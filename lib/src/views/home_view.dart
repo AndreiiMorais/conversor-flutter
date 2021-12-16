@@ -1,4 +1,3 @@
-import 'package:conversor_flutter/src/models/currency.dart';
 import 'package:conversor_flutter/src/models/model_currency.dart';
 import 'package:flutter/material.dart';
 
@@ -21,6 +20,7 @@ class HomeView extends StatelessWidget {
                 height: 150,
               ),
               ModelCurrency(),
+              SizedBox(height: 20),
               ModelCurrency(),
               SizedBox(
                 height: 50,

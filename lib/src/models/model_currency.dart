@@ -15,7 +15,7 @@ class ModelCurrency extends StatelessWidget {
             child: DropdownButton(
               isExpanded: true,
               underline: Container(
-                height: 1,
+                height: 2,
                 color: Colors.green,
               ),
               items: const [
