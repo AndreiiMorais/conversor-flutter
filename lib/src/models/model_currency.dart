@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:conversor_flutter/src/controllers/home_controler.dart';
 import 'package:conversor_flutter/src/models/currency.dart';
 import 'package:flutter/material.dart';
@@ -26,8 +28,8 @@ class ModelCurrency extends StatelessWidget {
           child: SizedBox(
             height: 57,
             child: DropdownButton<CurrencyModel>(
-              value: selectedItem,
               isExpanded: true,
+              value: selectedItem,
               underline: Container(
                 height: 2,
                 color: Colors.green,
