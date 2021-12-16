@@ -8,7 +8,7 @@ class HomeController {
 
   late CurrencyModel fromCurrency;
   late CurrencyModel toCurrency;
-  HomeControler() {
+  HomeController({fromText, toText}) {
     currencies = CurrencyModel.getCurrencies();
     fromCurrency = currencies[0];
     toCurrency = currencies[1];
