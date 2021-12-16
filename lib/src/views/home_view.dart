@@ -65,7 +65,9 @@ class _HomeViewState extends State<HomeView> {
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
                       primary: Colors.green, elevation: 20),
-                  onPressed: () {},
+                  onPressed: () {
+                    homeController.convert();
+                  },
                   child: Text('CONVERTER'),
                 )
               ],
