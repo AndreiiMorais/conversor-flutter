@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 
 class HomeView extends StatefulWidget {
   HomeView({Key? key}) : super(key: key);
+  
 
   @override
   State<HomeView> createState() => _HomeViewState();
@@ -13,9 +14,7 @@ class HomeView extends StatefulWidget {
 
 class _HomeViewState extends State<HomeView> {
   final TextEditingController fromText = TextEditingController();
-
   final TextEditingController toText = TextEditingController();
-
   var homeController = HomeController();
   @override
   void initState() {
@@ -51,7 +50,7 @@ class _HomeViewState extends State<HomeView> {
                 SizedBox(height: 20),
                 ModelCurrency(
                   selectedItem: homeController.toCurrency,
-                  control: toText,
+                  control: homeController.toText,
                   items: homeController.currencies,
                   onChanged: (model) {
                     setState(() {
