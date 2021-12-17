@@ -5,22 +5,21 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class HomeView extends StatefulWidget {
+  final TextEditingController fromText = TextEditingController();
+  final TextEditingController toText = TextEditingController();
   HomeView({Key? key}) : super(key: key);
-  
 
   @override
   State<HomeView> createState() => _HomeViewState();
 }
 
 class _HomeViewState extends State<HomeView> {
-  final TextEditingController fromText = TextEditingController();
-  final TextEditingController toText = TextEditingController();
-  var homeController = HomeController();
+  HomeController homeController = HomeController();
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
-    homeController = HomeController(fromText: fromText, toText: toText);
+    homeController = HomeController();
   }
 
   @override
@@ -39,7 +38,7 @@ class _HomeViewState extends State<HomeView> {
                 ),
                 ModelCurrency(
                   selectedItem: homeController.fromCurrency,
-                  control: fromText,
+                  control: homeController.fromText,
                   items: homeController.currencies,
                   onChanged: (model) {
                     setState(() {
