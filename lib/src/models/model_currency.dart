@@ -34,8 +34,7 @@ class ModelCurrency extends StatelessWidget {
                 height: 2,
                 color: Colors.green,
               ),
-              items: items
-                  .map((e) => DropdownMenuItem<CurrencyModel>(
+              items: items.map((e) => DropdownMenuItem<CurrencyModel>(
                       value: e, child: Text(e.name)))
                   .toList(),
               onChanged: onChanged,
